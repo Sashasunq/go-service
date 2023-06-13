@@ -1,4 +1,8 @@
-Application Go-Service
+**
+
+# Application Go-Service
+
+**
 
 You can create a simple HTTP service in Go that responds to an HTTP GET request with the timestamp and the hostname of the server by using the net/http package. Below is a step-by-step guide to build such a service.
 
@@ -17,7 +21,7 @@ cd go-service
 go run main.go
 ```
 
-This will start an HTTP server on port 8080.
+**This will start an HTTP server on port 8080.**
 
 5. Test the service by sending an HTTP GET request. You can do this using a web browser or a tool like curl from the command line:
 
@@ -25,11 +29,11 @@ This will start an HTTP server on port 8080.
 curl http://localhost:8080
 ```
 
-You should see a response like this:
+**You should see a response like this:**
 
 `Timestamp: 2023-06-13T14:10:30Z Hostname: your-hostname`
 
-Docker image creation
+# Docker image creation
 
 To package your Go service into a Docker image, you need to write a Dockerfile. This Dockerfile will be multi-stage to make the resulting image as small as possible. Here's a step-by-step guide:
 
@@ -50,16 +54,16 @@ Your service will now be accessible at http://localhost:8080 as before, but it's
 
 Note that this Dockerfile assumes you are using Go modules (go.mod and go.sum files) for dependency management. If you aren't using Go modules, you can remove the lines related to them.
 
-Add the Prometheus Go client to your project with updated import prometeus golang:
+**Add the Prometheus Go client to your project with updated import prometeus golang:**
 
 ```
 go get github.com/prometheus/client_golang/prometheus
 go get github.com/prometheus/client_golang/prometheus/promhttp
 ```
 
-Kubernetes deployment:
+# Kubernetes deployment:
 
-Start Minikube and Deploy Application
+**Start Minikube and Deploy Application**
 
 1. Start Minikube:
 
@@ -94,7 +98,7 @@ minikube service go-service
 
 6. Deploy Prometheus and Grafana for Monitoring
 
-Apply the Prometheus configuration, deployment, and service manifests:
+**Apply the Prometheus configuration, deployment, and service manifests:**
 
 ```
 kubectl apply -f prometheus-config.yaml
@@ -122,6 +126,6 @@ minikube service grafana
 ```
 Use admin for both the username and password. Add Prometheus as a data source in Grafana and create a dashboard for visualizing the metrics.
 
-Congratulations! You have deployed a Go application with monitoring enabled in Kubernetes.
+**Congratulations! You have deployed a Go application with monitoring enabled in Kubernetes.**
 
 This README provides a more streamlined set of instructions, breaking down the process into three main steps: Application Go-Service, Docker image creation, Kubernetes Deployment with metrics
