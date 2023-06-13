@@ -13,7 +13,8 @@ cd go-service
 3. Create a new file named main.go and open it in your text editor.
 4. Run the service:
 
-```go run main.go
+```
+go run main.go
 ```
 
 This will start an HTTP server on port 8080.
@@ -51,7 +52,8 @@ Note that this Dockerfile assumes you are using Go modules (go.mod and go.sum fi
 
 Add the Prometheus Go client to your project with updated import prometeus golang:
 
-```go get github.com/prometheus/client_golang/prometheus
+```
+go get github.com/prometheus/client_golang/prometheus
 go get github.com/prometheus/client_golang/prometheus/promhttp
 ```
 
