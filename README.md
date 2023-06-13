@@ -1,8 +1,4 @@
-**
-
 # Application Go-Service
-
-**
 
 You can create a simple HTTP service in Go that responds to an HTTP GET request with the timestamp and the hostname of the server by using the net/http package. Below is a step-by-step guide to build such a service.
 
